@@ -10,10 +10,6 @@
     function loginCtrl(loginService, $state, $scope) {
         var content = {};
         var MainCtrl = $scope.$parent.MainCtrl;
-        content.account = {
-            username: "luke skywalker",
-            password: "19BBY"
-        };
         content.loginNow = function () {
             content.userObj = {};
             loginService.authenticate(content.account).then(function (userobj) {
